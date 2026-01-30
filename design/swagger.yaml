@@ -1,0 +1,312 @@
+openapi: 3.0.1
+info:
+  title: 'Nautical Api V1'
+  version: '1.0'
+paths:
+  /terminals:
+    get:
+      operationId: terminals
+      summary: All terminals
+      description: Returns GLN and name for all terminals
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfLocation'
+              example:
+              - gln: '8719331163743'
+                name: Botlek
+              - gln: '8719331163750'
+                name: Europoort
+              - gln: '8719331163774'
+                name: Maasvlakte 2
+  /terminals/{gln}:
+    get:
+      operationId: terminal
+      summary: Terminal details with berths
+      description: Returns detailed terminal information with the name and GLN of the berths
+      parameters:
+        - name: gln
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^[1-9][0-9]{12,}$'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TerminalWithBerths'
+              example:
+                gln: '8719331161169'
+                name: ECT Delta Terminal
+                geoCoordinate:
+                  latitude: 51.971866
+                  longitude: 4.045402
+                portFacilityNumber: NLRTM-0001
+                terminalType: ContainerTerminal
+                berths:
+                  - gln: '8719331011389'
+                    name: DDE
+                  - gln: '8719331011129'
+                    name: DBFT
+        '404':
+          description: Terminal not found
+  /berths/{gln}:
+    get:
+      operationId: berth
+      summary: Berth details with berth positions (optional)
+      description: Returns detailed berth information with berth positions
+      parameters:
+        - name: gln
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^[1-9][0-9]{12,}$'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BerthWithPositions'
+              examples:
+                example1:
+                  summary: Berth without positions
+                  value:
+                  - gln: '8719331011389'
+                    name: DDE
+                    berthType: Dolphin
+                    unloCode: NLRTM
+                    geoCoordinates:
+                    - latitude: 51.971866
+                      longitude: 4.045402
+                    - latitude: 51.951335
+                      longitude: 4.076587
+                example2:
+                  summary: Berth with positions
+                  value:
+                  - gln: '8719331011389'
+                    name: DDE
+                    berthType: Dolphin
+                    unloCode: NLRTM
+                    geoCoordinates:
+                    - latitude: 51.971866
+                      longitude: 4.045402
+                    - latitude: 51.951335
+                      longitude: 4.076587
+                    positions:
+                    - glnWithExt: 8719331013345-1
+                      name: '1'
+                      type: Bollard Number
+                      geoCoordinate:
+                        latitude: 51.951335
+                        longitude: 4.076587
+                    - glnWithExt: 8719331013345-21
+                      name: '21'
+                      type: Bollard Number
+                      geoCoordinate:
+                        latitude: 51.971866
+                        longitude: 4.045402
+        '404':
+          description: Berth not found
+  /fetchAll:
+    get:
+      operationId: fetchAll
+      summary: Fetches all terminals and berths
+      description: Returns all information as a complete dataset
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfTerminalWithBerthsAndPositions'
+        '404':
+          description: No terminals and berths found
+components:
+  schemas:
+    Location:
+      type: object
+      properties:
+        gln:
+          type: string
+          pattern: /^[1-9][0-9]{12,}$/
+          description: Global location number (GLN)
+          example: 8719331161169
+        name:
+          type: string
+          description: Name of the location (terminal or berth)
+          example: TerminalOrBerthName
+        shortName:
+          type: string
+          description: Short name of the Location
+          example: TERMINAL
+      additionalProperties: false
+      required:
+        - gln
+        - name
+      description: A location with a global location number (GLN) and a name.
+    Terminal:
+      allOf:
+        - $ref: '#/components/schemas/Location'
+        - type: object
+          properties:
+            geoCoordinate:
+              $ref: '#/components/schemas/Coordinate'
+            portFacilityNumber:
+              type: string
+              description: Port facility number of the terminal
+              example: NLRTM-0001
+            terminalType:
+              type: string
+              enum: ['Unknown','BulkTerminal','ContainerTerminal','TankerTerminal','FerryTerminal','PassengerTerminal', 'RoRoTerminal', 'ServiceHarbour', 'ServiceRepair', 'Shipyard']
+              description: Type of the terminal
+              example: ContainerTerminal
+          additionalProperties: false
+          description: A terminal
+          required:
+            - geoCoordinate
+            - terminalType
+    Berth:
+      allOf:
+        - $ref: '#/components/schemas/Location'
+        - type: object
+          properties:
+            berthType:
+              type: string
+              enum: [
+                'Unknown', 
+                'None', 
+                'Anchor Berth', 
+                'Fender or Breasting Dolphin', 
+                'Mole', 
+                'Multi Buoy Mooring (MBM) Berth', 
+                'Open Face Wharf',
+                'Pier (Jetty)',
+                'Quay', 
+                'Ramp', 
+                'Slipway',
+                'Solid Face Wharf',
+                'Tie-Up Wall',
+                'Wharf']
+              description: The berth type
+              example: Dolphin
+            unloCode:
+              type: string
+              description: UN/LO code
+              example: NLRTM
+            geoCoordinates:
+              $ref: '#/components/schemas/ArrayOfCoordinate'
+          additionalProperties: false
+          description: A berth
+          required:
+            - berthType
+            - unloCode
+            - geoCoordinates
+    BerthPosition:
+      type: object
+      properties:
+        glnWithExt:
+          type: string
+          pattern: /^[1-9][0-9]{12,}-/
+          description: Global location number (GLN) with extension
+          example: 8719331013345-21
+        name:
+          type: string
+          description: Name of the berth position
+          example: 21
+        type:
+          type: string
+          enum: [
+            'Unknown',
+            'Not Applicable', 
+            'Loading Arm / Manifold Number', 
+            'Ramp Number', 
+            'Bollard Number', 
+            'Meter Mark Number']
+          description: The berth position type
+          example: Bollard Number
+        geoCoordinate:
+          $ref: '#/components/schemas/Coordinate'
+      additionalProperties: false
+      description: A berth position
+      required:
+        - glnWithExt
+        - name
+        - type
+        - geoCoordinate
+    Coordinate:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Latitude part of coordinate
+          example: 51.971866
+          format: double
+        longitude:
+          type: number
+          description: Longitude part of coordinate
+          example: 4.045402
+          format: double
+      additionalProperties: false
+      description: A coordinate.
+      required:
+        - latitude
+        - longitude
+    TerminalWithBerths:
+      description: A terminal with berths
+      allOf:
+        - $ref: '#/components/schemas/Terminal'
+        - type: object
+          properties:
+            berths: 
+              $ref: '#/components/schemas/ArrayOfLocation'
+          additionalProperties: false
+          required:
+            - berths
+    TerminalWithBerthsAndPositions:
+      description: A terminal with berth and berth positions
+      allOf:
+        - $ref: '#/components/schemas/Terminal'
+        - type: object
+          properties:
+            berths:
+              $ref: '#/components/schemas/ArrayOfBerthWithPositions'
+          additionalProperties: false
+          required:
+            - berths
+    BerthWithPositions:
+      description: A berth with berth positions
+      allOf:
+        - $ref: '#/components/schemas/Berth'
+        - type: object
+          properties:
+            positions:
+              $ref: '#/components/schemas/ArrayOfBerthPosition'
+          additionalProperties: false
+    ArrayOfCoordinate:
+      type: array
+      items:
+        $ref: '#/components/schemas/Coordinate'
+    ArrayOfLocation:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    ArrayOfBerthWithPositions:
+      type: array
+      items:
+        $ref: '#/components/schemas/BerthWithPositions'
+    ArrayOfBerthPosition:
+      type: array
+      items:
+        $ref: '#/components/schemas/BerthPosition'
+    ArrayOfTerminalWithBerthsAndPositions:
+      type: array
+      items:
+        $ref: '#/components/schemas/TerminalWithBerthsAndPositions'
