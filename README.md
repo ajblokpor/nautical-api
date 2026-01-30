@@ -2,7 +2,7 @@
 # Introduction
 This is the home of the international Nautical Location API.
 ## Definitions
-For the definition of the API see the Open API definiton (Swagger) [document](./blob/main/design/swagger.yaml). 
+For the definition of the API see the Open API definiton (Swagger) [document](./design/swagger.yaml).
 ## Code
 ### Demo API
 To try the API as a client you can run the Demo API application. This will provide a number of fictive terminals, berths and optionally berth positions that you can check with any REST client like [Postman](https://www.postman.com/).
