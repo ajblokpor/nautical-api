@@ -12,9 +12,102 @@ const dataPath = path.join(__dirname, 'data.json');
 const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 const { terminals, berths } = data;
 
+if(terminals === undefined || berths === undefined) {
+  console.error('Terminals and/or berths data is undefined.');
+  process.exit(1);
+}
+
+if(terminals.length === 0 || berths.length === 0) {
+  console.error('No terminals or berths found in the data.');
+  process.exit(1);
+}
+
 // Validate GLN pattern
 function isValidGln(gln) {
   return /^[1-9][0-9]{12,}$/.test(gln);
+}
+
+let errorInData = false;
+for(const terminal of terminals) {
+  if(!isValidGln(terminal.gln)) {
+    console.error(`Invalid GLN format for terminal: ${terminal.name} (${terminal.gln})`);
+    errorInData = true;
+  }
+  if(!terminal.name) {
+    console.error(`Terminal name is missing for GLN: ${terminal.gln}`);
+    errorInData = true;
+  }
+  if(!terminal.geoCoordinate || !terminal.geoCoordinate.latitude || !terminal.geoCoordinate.longitude) {
+    console.error(`Geo coordinates are missing or incomplete for terminal: ${terminal.name} (${terminal.gln})`);
+    errorInData = true;
+  }
+  if(!terminal.berths) {
+    console.error(`Berths array is missing for terminal: ${terminal.name} (${terminal.gln})`);
+    errorInData = true;
+  }
+  if(terminal.berths && terminal.berths.length > 0) {
+    for(const berth of terminal.berths) {
+      if(!isValidGln(berth.gln)) {
+        console.error(`Invalid GLN format for berth: ${berth.name} (${berth.gln}) in terminal: ${terminal.name}`);
+        errorInData = true;
+      }
+      if(!berth.name) {
+        console.error(`Berth name is missing for GLN: ${berth.gln} in terminal: ${terminal.name}`);
+        errorInData = true;
+      }
+      if(!berths.find(b => b.gln === berth.gln)) {
+        console.error(`Berth with GLN ${berth.gln} referenced in terminal ${terminal.name} not found in berths data.`);
+        errorInData = true;
+      }
+    }
+  }
+}
+
+for(const berth of berths) {
+  if(!isValidGln(berth.gln)) {
+    console.error(`Invalid GLN format for berth: ${berth.name} (${berth.gln})`);
+    errorInData = true;
+  }
+  if(!berth.name) {
+    console.error(`Berth name is missing for GLN: ${berth.gln}`);
+    errorInData = true;
+  }
+  if(!berth.geoCoordinates || !Array.isArray(berth.geoCoordinates) || berth.geoCoordinates.length === 0) {
+    console.error(`Geo coordinates are missing or incomplete for berth: ${berth.name} (${berth.gln})`);
+    errorInData = true;
+  }
+  for(const position of berth.geoCoordinates) {
+    if(!position.latitude || !position.longitude) {
+      console.error(`Geo coordinate position is missing latitude or longitude for berth: ${berth.name} (${berth.gln})`);
+      errorInData = true;
+    }
+  }
+
+  if(berth.positions && Array.isArray(berth.positions)) {
+    for(pos of berth.positions) {
+      if(!pos.glnWithExt) {
+        console.error(`Position is missing GLN with extension for berth: ${berth.name} (${berth.gln})`);
+        errorInData = true;
+      }
+      if(!pos.name) {
+        console.error(`Position name is missing for berth: ${berth.name} (${berth.gln})`);
+        errorInData = true;
+      }
+      if(!pos.type) {
+        console.error(`Position type is missing for berth: ${berth.name} (${berth.gln})`);
+        errorInData = true;
+      }
+      if(!pos.geoCoordinate || !pos.geoCoordinate.latitude || !pos.geoCoordinate.longitude) {
+        console.error(`Geo coordinate is missing or incomplete for position: ${pos.name} in berth: ${berth.name} (${berth.gln})`);
+        errorInData = true;
+      }
+    }
+  }
+}
+
+if(errorInData) {
+  console.error('Errors found in data. Please fix the issues and restart the server.');
+  process.exit(1);
 }
 
 // GET /terminals - Returns GLN and name for all terminals
