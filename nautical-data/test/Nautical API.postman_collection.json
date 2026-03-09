@@ -1,0 +1,375 @@
+{
+  "info": {
+    "_postman_id": "5d92f27d-0b7f-46f7-b9d6-0c4b67ef12fe",
+    "name": "Nautical API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14263682"
+  },
+  "item": [
+    {
+      "name": "List Terminals",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Test status matches 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "const schema = {\r",
+              "    \"type\": \"array\",\r",
+              "    \"items\": {\r",
+              "        \"type\": \"object\",\r",
+              "        \"properties\": {\r",
+              "            \"gln\": { \"type\": \"string\" },\r",
+              "            \"shortName\": { \"type\": \"string\" },\r",
+              "            \"name\": { \"type\": \"string\" }\r",
+              "        },\r",
+              "        \"required\": [\"gln\", \"shortName\", \"name\"],\r",
+              "        \"additionalProperties\": false\r",
+              "    }\r",
+              "};\r",
+              "\r",
+              "pm.test('Test body schema matches swagger definition', function () {\r",
+              "    pm.response.to.have.jsonSchema (schema);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test more than 5 terminals are returned\", function () {\r",
+              "    pm.expect(jsonData.length).to.greaterThan(5);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test first record GLN is a number\", function () {\r",
+              "    const gln = jsonData[0].gln;\r",
+              "    pm.expect(gln).to.match(/^[1-9][0-9]+$/);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test first record name is filled\", function () {\r",
+              "    const name = jsonData[0].name;\r",
+              "    pm.expect(name).to.not.null;\r",
+              "    pm.expect(name).to.not.empty;\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/terminals",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "terminals"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Single Terminal",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Test status matches 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "const schema = {\r",
+              "    \"type\": \"object\",\r",
+              "    \"properties\": {\r",
+              "        \"gln\": { \"type\": \"string\" },\r",
+              "        \"shortName\": { \"type\": \"string\" },\r",
+              "        \"name\": { \"type\": \"string\" },\r",
+              "        \"terminalType\": { \"type\": \"string\" },\r",
+              "        \"geoCoordinate\": {\r",
+              "            \"type\": \"object\",\r",
+              "            \"properties\": {\r",
+              "                \"latitude\": { \"type\": \"number\" },\r",
+              "                \"longitude\": { \"type\": \"number\" }\r",
+              "            },\r",
+              "            \"required\": [\"latitude\", \"longitude\"],\r",
+              "            \"additionalProperties\": false\r",
+              "        },\r",
+              "        \"portFacilityNumber\": { \"type\": \"string\"},\r",
+              "        \"berths\": {\r",
+              "            \"type\": \"array\",\r",
+              "            \"items\": [\r",
+              "                {\r",
+              "                    \"type\": \"object\",\r",
+              "                    \"properties\": {\r",
+              "                        \"gln\": {\r",
+              "                            \"type\": \"string\"\r",
+              "                        },\r",
+              "                        \"name\": {\r",
+              "                            \"type\": \"string\"\r",
+              "                        }\r",
+              "                    },\r",
+              "                    \"required\": [\r",
+              "                        \"gln\",\r",
+              "                        \"name\"\r",
+              "                    ]\r",
+              "                }\r",
+              "            ]\r",
+              "        }\r",
+              "    },\r",
+              "    \"required\": [\"gln\", \"name\", \"terminalType\"],\r",
+              "    \"additionalProperties\": false\r",
+              "};\r",
+              "\r",
+              "pm.test('Test body schema matches swagger definition', function () {\r",
+              "    pm.response.to.have.jsonSchema (schema);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test terminal gln returned matches requested gln\", function () {\r",
+              "    pm.expect(jsonData.gln).to.eql(pm.collectionVariables.get('terminalGln'));\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test GLN is a number\", function () {\r",
+              "    const gln = jsonData.gln;\r",
+              "    pm.expect(gln).to.match(/^[1-9][0-9]+$/);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test names are filled\", function () {\r",
+              "    const shortName = jsonData.shortName;\r",
+              "    const name = jsonData.name;\r",
+              "    pm.expect(shortName).to.not.null;\r",
+              "    pm.expect(shortName).to.not.empty;\r",
+              "    pm.expect(name).to.not.null;\r",
+              "    pm.expect(name).to.not.empty;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test coordinate is filled\", function () {\r",
+              "    let coordinate = jsonData.geoCoordinate;\r",
+              "    pm.expect(coordinate.latitude).to.be.greaterThan(0);\r",
+              "    pm.expect(coordinate.longitude).to.be.greaterThan(0);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/terminals/{{terminalGln}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "terminals",
+            "{{terminalGln}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Single Berth",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Updated the test script to fix the TypeError\r",
+              "pm.test(\"Test status matches 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const jsonData = pm.response.json();\r",
+              "\r",
+              "const schema = {\r",
+              "    \"type\": \"object\",\r",
+              "    \"properties\": {\r",
+              "        \"gln\": { \"type\": \"string\" },\r",
+              "        \"name\": { \"type\": \"string\" },\r",
+              "        \"berthType\": { \"type\": \"string\" },\r",
+              "        \"unloCode\": { \"type\": \"string\" },\r",
+              "        \"geoCoordinates\": {\r",
+              "            \"type\": \"array\",\r",
+              "            \"items\": [\r",
+              "                {\r",
+              "                    \"type\": \"object\",\r",
+              "                    \"properties\": {\r",
+              "                        \"latitude\": { \"type\": \"number\" },\r",
+              "                        \"longitude\": { \"type\": \"number\" }\r",
+              "                    },\r",
+              "                    \"required\": [\"latitude\", \"longitude\"],\r",
+              "                    \"additionalProperties\": false\r",
+              "                }\r",
+              "            ]\r",
+              "        },\r",
+              "        \"positions\": {\r",
+              "            \"type\": \"array\",\r",
+              "            \"items\": [\r",
+              "                {\r",
+              "                    \"type\": \"object\",\r",
+              "                    \"properties\": {\r",
+              "                        \"glnWithExt\": {\r",
+              "                            \"type\": \"string\"\r",
+              "                        },\r",
+              "                        \"name\": {\r",
+              "                            \"type\": \"string\"\r",
+              "                        },\r",
+              "                        \"type\": {\r",
+              "                            \"type\": \"string\"\r",
+              "                        },\r",
+              "                    },\r",
+              "                    \"required\": [\r",
+              "                        \"glnWithExt\",\r",
+              "                        \"name\",\r",
+              "                        \"type\"\r",
+              "                    ]\r",
+              "                }\r",
+              "            ]\r",
+              "        },\r",
+              "        \"error\": { \"type\": \"string\" }\r",
+              "    },\r",
+              "    \"required\": [\"gln\", \"name\", \"berthType\", \"geoCoordinates\"],\r",
+              "    \"additionalProperties\": false\r",
+              "};\r",
+              "\r",
+              "pm.test('Test body schema matches swagger definition', function () {\r",
+              "    pm.response.to.have.jsonSchema(schema);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test terminal gln returned matches requested gln\", function () {\r",
+              "    pm.expect(jsonData.gln).to.eql(pm.collectionVariables.get('berthGln'));\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test GLN is a number\", function () {\r",
+              "    const gln = jsonData.gln;\r",
+              "    pm.expect(gln).to.match(/^[1-9][0-9]+$/);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Test name is filled\", function () {\r",
+              "    const name = jsonData.name;\r",
+              "    pm.expect(name).to.not.be.null;\r",
+              "    pm.expect(name).to.not.be.empty;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"UNLO Code is filled\", function () {\r",
+              "    const unloCode = jsonData.unloCode;\r",
+              "    pm.expect(unloCode).to.not.be.null;\r",
+              "    pm.expect(unloCode).to.not.be.empty;\r",
+              "});\r",
+              "\r",
+              "pm.test(\"coordinate is filled\", function () {\r",
+              "    const coordinate = jsonData.geoCoordinates[0];\r",
+              "    pm.expect(coordinate.latitude).to.be.greaterThan(0);\r",
+              "    pm.expect(coordinate.longitude).to.be.greaterThan(0);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"check positions if available\", function () {\r",
+              "    const pos = jsonData.positions;\r",
+              "\r",
+              "    if(pos.length > 0) {\r",
+              "        const firstPos = pos[0];\r",
+              "        pm.expect(firstPos.glnWithExt).to.not.be.null;\r",
+              "        pm.expect(firstPos.glnWithExt).to.not.be.empty;\r",
+              "        pm.expect(firstPos.name).to.not.be.null;\r",
+              "        pm.expect(firstPos.type).to.not.be.null;\r",
+              "        pm.expect(firstPos.type).to.not.be.empty;\r",
+              "    }\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/berths/{{berthGln}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "berths",
+            "{{berthGln}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/fetchAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "fetchAll"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "terminalGln",
+      "value": ""
+    },
+    {
+      "key": "berthGln",
+      "value": ""
+    }
+  ]
+}
