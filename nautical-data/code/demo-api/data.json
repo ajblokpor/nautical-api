@@ -1,0 +1,1146 @@
+{
+    "terminals": [
+        {
+            "gln": "8719331163781",
+            "name": "Openbare ligplaatsen Willemskade",
+            "shortName": "Willemskade",
+            "terminalType": "ServiceHarbour",
+            "geoCoordinate": {
+                "latitude": 51.91162,
+                "longitude": 4.497471
+            },
+            "berths": [
+                {
+                    "gln": "8719331010801",
+                    "name": "WILLEMSKADE"
+                }
+            ]
+        },
+        {
+            "gln": "8719331164108",
+            "name": "Openbare ligplaatsen Parkkade",
+            "shortName": "Parkkade",
+            "terminalType": "ServiceHarbour",
+            "geoCoordinate": {
+                "latitude": 51.903217,
+                "longitude": 4.472209
+            },
+            "berths": [
+                {
+                    "gln": "8719331166256",
+                    "name": "PARKKADE 1"
+                },
+                {
+                    "gln": "8719331166195",
+                    "name": "PARKKADE STEIGER 2"
+                },
+                {
+                    "gln": "8719331166188",
+                    "name": "PARKKADE STEIGER 3"
+                }
+            ]
+        },
+        {
+            "gln": "8719331163576",
+            "name": "Cruiseterminal Holland Amerikakade",
+            "shortName": "Amerikakade",
+            "terminalType": "ServiceHarbour",
+            "geoCoordinate": {
+                "latitude": 51.905853,
+                "longitude": 4.485324
+            },
+            "berths": [
+                {
+                    "gln": "8719331013864",
+                    "name": "HOLLAND AMERIKAKADE"
+                },
+                {
+                    "gln": "8719331010467",
+                    "name": "KONINGINNEHOOFD"
+                }
+            ]
+        },
+        {
+            "gln": "8719331019712",
+            "name": "Palen Waalhaven",
+            "shortName": "Waalhaven",
+            "terminalType": "BulkTerminal",
+            "geoCoordinate": {
+                "latitude": 51.894775,
+                "longitude": 4.444063
+            },
+            "berths": [
+                {
+                    "gln": "8714231752639",
+                    "name": "PALEN 20"
+                },
+                {
+                    "gln": "8714231751434",
+                    "name": "PALEN 21"
+                },
+                {
+                    "gln": "8714231751182",
+                    "name": "BOEIEN 23"
+                },
+                {
+                    "gln": "8714231755036",
+                    "name": "BOEIEN 25"
+                }
+            ]
+        },
+        {
+            "gln": "8719331164153",
+            "name": "Feederwachtpalen Europahaven",
+            "shortName": "Europahaven",
+            "terminalType": "ContainerTerminal",
+            "geoCoordinate": {
+                "latitude": 51.963104,
+                "longitude": 4.055671
+            },
+            "berths": [
+                {
+                    "gln": "8719331014069",
+                    "name": "FWP A"
+                },
+                {
+                    "gln": "8719331014168",
+                    "name": "FWP 2"
+                },
+                {
+                    "gln": "8719331014175",
+                    "name": "FWP 3"
+                }
+            ]
+        },
+        {
+            "gln": "8719331160889",
+            "name": "Palen Noordzeeweg",
+            "shortName": "Noordzeeweg",
+            "terminalType": "TankerTerminal",
+            "geoCoordinate": {
+                "latitude": 51.941117,
+                "longitude": 4.17932
+            },
+            "berths": [
+                {
+                    "gln": "8714231759928",
+                    "name": "PALEN 79"
+                },
+                {
+                    "gln": "8714231759362",
+                    "name": "PALEN 80"
+                },
+                {
+                    "gln": "8719331164184",
+                    "name": "PALEN 81"
+                },
+                {
+                    "gln": "8719331012447",
+                    "name": "PALEN 82"
+                }
+            ]
+        },
+        {
+            "gln": "8719331163637",
+            "name": "Amalia Terminal",
+            "shortName": "Amalia",
+            "terminalType": "TankerTerminal",
+            "geoCoordinate": {
+                "latitude": 51.975881,
+                "longitude": 3.992526
+            },
+            "berths": [
+                {
+                    "gln": "8714231759492",
+                    "name": "PALEN 90"
+                },
+                {
+                    "gln": "8714231757764",
+                    "name": "PALEN 91"
+                },
+                {
+                    "gln": "8719331018494",
+                    "name": "PINLOCATIE D"
+                },
+                {
+                    "gln": "8719331165426",
+                    "name": "PINLOCATIE E"
+                }
+            ]
+        }
+    ],
+    "berths": [
+        {
+            "gln": "8719331010801",
+            "name": "WILLEMSKADE",
+            "berthType": "Quay",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.907572,
+                    "longitude": 4.480793
+                },
+                {
+                    "latitude": 51.908443,
+                    "longitude": 4.481924
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331010801-Center position",
+                    "name": "Center position",
+                    "type": "Not Applicable",
+                    "geoCoordinate": {
+                        "latitude": 51.908008,
+                        "longitude": 4.481359
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331166195",
+            "name": "PARKKADE STEIGER 2",
+            "berthType": "Jetty",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.903523,
+                    "longitude": 4.472675
+                },
+                {
+                    "latitude": 51.902813,
+                    "longitude": 4.47066
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331166195-Center position",
+                    "name": "Center position",
+                    "type": "Not Applicable",
+                    "geoCoordinate": {
+                        "latitude": 51.903168,
+                        "longitude": 4.471666
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331166188",
+            "name": "PARKKADE STEIGER 3",
+            "berthType": "Jetty",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.903523,
+                    "longitude": 4.472675
+                },
+                {
+                    "latitude": 51.904216,
+                    "longitude": 4.474605
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331166188-Center position",
+                    "name": "Center position",
+                    "type": "Not Applicable",
+                    "geoCoordinate": {
+                        "latitude": 51.903872,
+                        "longitude": 4.473647
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331166256",
+            "name": "PARKKADE 1",
+            "berthType": "Quay",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.902457,
+                    "longitude": 4.469051
+                },
+                {
+                    "latitude": 51.902849,
+                    "longitude": 4.470438
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331166256-6",
+                    "name": "6",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902616,
+                        "longitude": 4.469614
+                    }
+                },
+                {
+                    "glnWithExt": "8719331166256-5",
+                    "name": "5",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902539,
+                        "longitude": 4.469344
+                    }
+                },
+                {
+                    "glnWithExt": "8719331166256-7",
+                    "name": "7",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902693,
+                        "longitude": 4.469884
+                    }
+                },
+                {
+                    "glnWithExt": "8719331166256-4",
+                    "name": "4",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902457,
+                        "longitude": 4.469051
+                    }
+                },
+                {
+                    "glnWithExt": "8719331166256-8",
+                    "name": "8",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902768,
+                        "longitude": 4.470156
+                    }
+                },
+                {
+                    "glnWithExt": "8719331166256-9",
+                    "name": "9",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.902845,
+                        "longitude": 4.470426
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331013864",
+            "name": "HOLLAND AMERIKAKADE",
+            "berthType": "Quay",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.904309,
+                    "longitude": 4.482676
+                },
+                {
+                    "latitude": 51.90719,
+                    "longitude": 4.488252
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331013864-37",
+                    "name": "37",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904291,
+                        "longitude": 4.482683
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-10",
+                    "name": "10",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906666,
+                        "longitude": 4.487238
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-9",
+                    "name": "9",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906762,
+                        "longitude": 4.487423
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-8",
+                    "name": "8",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906842,
+                        "longitude": 4.487579
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-7",
+                    "name": "7",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906938,
+                        "longitude": 4.487764
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-6",
+                    "name": "6",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.907018,
+                        "longitude": 4.48792
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-5",
+                    "name": "5",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.90716,
+                        "longitude": 4.488197
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-36",
+                    "name": "36",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904388,
+                        "longitude": 4.482829
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-35",
+                    "name": "35",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904471,
+                        "longitude": 4.482991
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-34",
+                    "name": "34",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904551,
+                        "longitude": 4.483146
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-33",
+                    "name": "33",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904647,
+                        "longitude": 4.483331
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-29",
+                    "name": "29",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905,
+                        "longitude": 4.484013
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-32",
+                    "name": "32",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904727,
+                        "longitude": 4.483487
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-31",
+                    "name": "31",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904824,
+                        "longitude": 4.483672
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-30",
+                    "name": "30",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904903,
+                        "longitude": 4.483828
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-24",
+                    "name": "24",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905432,
+                        "longitude": 4.48485
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-23",
+                    "name": "23",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905528,
+                        "longitude": 4.485037
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-22",
+                    "name": "22",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905608,
+                        "longitude": 4.485191
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-21",
+                    "name": "21",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905704,
+                        "longitude": 4.485378
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-20",
+                    "name": "20",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905784,
+                        "longitude": 4.485532
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-19",
+                    "name": "19",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.90588,
+                        "longitude": 4.485719
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-18",
+                    "name": "18",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905961,
+                        "longitude": 4.485874
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-17",
+                    "name": "17",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906056,
+                        "longitude": 4.48606
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-16",
+                    "name": "16",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906137,
+                        "longitude": 4.486215
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-25",
+                    "name": "25",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905352,
+                        "longitude": 4.484695
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-26",
+                    "name": "26",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905256,
+                        "longitude": 4.484509
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-15",
+                    "name": "15",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906233,
+                        "longitude": 4.486401
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-27",
+                    "name": "27",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905176,
+                        "longitude": 4.484354
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-14",
+                    "name": "14",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906313,
+                        "longitude": 4.486556
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-13",
+                    "name": "13",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906409,
+                        "longitude": 4.486742
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-12",
+                    "name": "12",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.90649,
+                        "longitude": 4.486897
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-11",
+                    "name": "11",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.906586,
+                        "longitude": 4.487084
+                    }
+                },
+                {
+                    "glnWithExt": "8719331013864-28",
+                    "name": "28",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.905079,
+                        "longitude": 4.484168
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331010467",
+            "name": "KONINGINNEHOOFD",
+            "berthType": "Quay",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.904297,
+                    "longitude": 4.482675
+                },
+                {
+                    "latitude": 51.90378,
+                    "longitude": 4.483374
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331010467-41",
+                    "name": "41",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.903769,
+                        "longitude": 4.483388
+                    }
+                },
+                {
+                    "glnWithExt": "8719331010467-40",
+                    "name": "40",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.903906,
+                        "longitude": 4.483204
+                    }
+                },
+                {
+                    "glnWithExt": "8719331010467-39",
+                    "name": "39",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.90404,
+                        "longitude": 4.483022
+                    }
+                },
+                {
+                    "glnWithExt": "8719331010467-38",
+                    "name": "38",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904178,
+                        "longitude": 4.482837
+                    }
+                },
+                {
+                    "glnWithExt": "8719331010467-37",
+                    "name": "37",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.904291,
+                        "longitude": 4.482683
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231752639",
+            "name": "Palen 20",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.89458,
+                    "longitude": 4.445306
+                },
+                {
+                    "latitude": 51.895,
+                    "longitude": 4.442833
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231752639-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.894789,
+                        "longitude": 4.44407
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231751434",
+            "name": "PALEN 21",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.894203,
+                    "longitude": 4.447523
+                },
+                {
+                    "latitude": 51.89458,
+                    "longitude": 4.445306
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231751434-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.894391,
+                        "longitude": 4.446416
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231751182",
+            "name": "B-P 23",
+            "berthType": "Buoy",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.894054,
+                    "longitude": 4.443267
+                },
+                {
+                    "latitude": 51.893652,
+                    "longitude": 4.445729
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231751182-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.893853,
+                        "longitude": 4.444497
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231755036",
+            "name": "B-P 25",
+            "berthType": "Buoy",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.893053,
+                    "longitude": 4.443971
+                },
+                {
+                    "latitude": 51.892625,
+                    "longitude": 4.446697
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231755036-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.892839,
+                        "longitude": 4.445334
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331014175",
+            "name": "FWP 3",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.962354,
+                    "longitude": 4.05431
+                },
+                {
+                    "latitude": 51.962597,
+                    "longitude": 4.057193
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331014175-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.962475,
+                        "longitude": 4.055751
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331014069",
+            "name": "FWP A",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.964088,
+                    "longitude": 4.053853
+                },
+                {
+                    "latitude": 51.963364,
+                    "longitude": 4.057143
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331014069-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.963725,
+                        "longitude": 4.055499
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331014168",
+            "name": "FWP 2",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.962532,
+                    "longitude": 4.054271
+                },
+                {
+                    "latitude": 51.962776,
+                    "longitude": 4.057153
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331014168-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.962654,
+                        "longitude": 4.055712
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231759928",
+            "name": "PALEN 79",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.942131,
+                    "longitude": 4.178121
+                },
+                {
+                    "latitude": 51.940606,
+                    "longitude": 4.181176
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231759928-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.941369,
+                        "longitude": 4.179649
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231759362",
+            "name": "PALEN 80",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.93849,
+                    "longitude": 4.185107
+                },
+                {
+                    "latitude": 51.93694,
+                    "longitude": 4.188222
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231759362-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.937715,
+                        "longitude": 4.186664
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331164184",
+            "name": "PALEN 81",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.934141,
+                    "longitude": 4.193733
+                },
+                {
+                    "latitude": 51.936535,
+                    "longitude": 4.188969
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331164184-East-West",
+                    "name": "East-West",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.935338,
+                        "longitude": 4.19135
+                    }
+                },
+                {
+                    "glnWithExt": "8719331164184-West",
+                    "name": "West",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.935936,
+                        "longitude": 4.190161
+                    }
+                },
+                {
+                    "glnWithExt": "8719331164184-East",
+                    "name": "East",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.93474,
+                        "longitude": 4.192541
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331012447",
+            "name": "PALEN 82",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.934141,
+                    "longitude": 4.193733
+                },
+                {
+                    "latitude": 51.931577,
+                    "longitude": 4.198796
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331012447-East",
+                    "name": "East",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.932219,
+                        "longitude": 4.197531
+                    }
+                },
+                {
+                    "glnWithExt": "8719331012447-East-West",
+                    "name": "East-West",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.932859,
+                        "longitude": 4.196265
+                    }
+                },
+                {
+                    "glnWithExt": "8719331012447-West",
+                    "name": "West",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.9335,
+                        "longitude": 4.194998
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231759492",
+            "name": "PALEN 90",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.97565,
+                    "longitude": 3.995074
+                },
+                {
+                    "latitude": 51.975055,
+                    "longitude": 3.990324
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231759492-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.975273,
+                        "longitude": 3.992063
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8714231757764",
+            "name": "PALEN 91",
+            "berthType": "Dolphin",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.972941,
+                    "longitude": 3.993529
+                },
+                {
+                    "latitude": 51.972645,
+                    "longitude": 3.991186
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8714231757764-Center position",
+                    "name": "Center position",
+                    "type": "Dolphin",
+                    "geoCoordinate": {
+                        "latitude": 51.972589,
+                        "longitude": 3.990742
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331018494",
+            "name": "PINLOCATIE D",
+            "berthType": "None",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.971884,
+                    "longitude": 3.984745
+                },
+                {
+                    "latitude": 51.971514,
+                    "longitude": 3.985652
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331018494-Center position",
+                    "name": "Center position",
+                    "type": "Not Applicable",
+                    "geoCoordinate": {
+                        "latitude": 51.971699,
+                        "longitude": 3.985198
+                    }
+                }
+            ]
+        },
+        {
+            "gln": "8719331165426",
+            "name": "PINLOCATIE E",
+            "berthType": "None",
+            "unloCode": "NLRTM",
+            "geoCoordinates": [
+                {
+                    "latitude": 51.968066,
+                    "longitude": 3.99335
+                },
+                {
+                    "latitude": 51.968622,
+                    "longitude": 3.992206
+                }
+            ],
+            "positions": [
+                {
+                    "glnWithExt": "8719331165426-Center position",
+                    "name": "Center position",
+                    "type": "Bollard",
+                    "geoCoordinate": {
+                        "latitude": 51.968344,
+                        "longitude": 3.992777
+                    }
+                }
+            ]
+        }
+    ]
+}
