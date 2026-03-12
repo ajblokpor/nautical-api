@@ -13,9 +13,10 @@ Execute `npm install` in a terminal window.
 Go to [MapBox website](https://www.mapbox.com/) and request a token. You can get one for free for development purposes.
 
 Create a `.env.local` file and add the MapBox token
-PUBLIC_MAPBOX_ACCESS_TOKEN=<token>
+`PUBLIC_MAPBOX_ACCESS_TOKEN=<token>`
 
 ## Run Maps UI
 
 Execute `npm run dev` in a terminal window.
+
 Run a browser at http://localhost:5173/
