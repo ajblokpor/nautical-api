@@ -7,18 +7,14 @@ This directory contains a list of harbors that have implemented the nautical dat
 
 ## Compliant Harbors
 
-|-----|---------------------------|------------------------|------------------------|
 | Nr. | Harbor                    | Nautical Data          | Operational Data       |
 |-----|---------------------------|------------------------|------------------------|
 |   1 | Port of Rotterdam         | Compliant              | Compliant              |
-|-----|---------------------------|------------------------|------------------------|
 
 ## Habors in development
 
-|---------------------------|------------------------|------------------------|
 | Harbor                    | Nautical Data          | Operational Data       |
 |---------------------------|------------------------|------------------------|
 | Port of Bremerhaven       | In development         |                        |
 | Port of Götenborg         |                        |  In test               |
-|---------------------------|------------------------|------------------------|
 
