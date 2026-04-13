@@ -9,7 +9,7 @@ This directory contains a list of harbors that have implemented the nautical dat
 
 | Nr. | Harbor                    | Nautical Data          | Operational Data       |
 |-----|---------------------------|------------------------|------------------------|
-|   1 | Port of Rotterdam         | Compliant              | Compliant              |
+|   1 | Port of Rotterdam         | [API](https://api.portofrotterdam.com/v1/nautical-locations) | [API](https://api.portofrotterdam.com/v1/operational-data) |
 
 ## Habors in development
 
