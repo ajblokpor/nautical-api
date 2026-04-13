@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Operational Data API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/visits/{unlocode}/{imonumber}/{crn}": {
+      "get": {
+        "tags": [
+          "Operational Data API"
+        ],
+        "summary": "Request Operational Data",
+        "description": "This endpoint can be used request operational data from a vessel's visit",
+        "operationId": "submit",
+        "parameters": [
+          {
+            "name": "unlocode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "imonumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "crn",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  }
+}
