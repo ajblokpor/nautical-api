@@ -3,25 +3,26 @@ info:
   title: Operational Data API
   version: '0.1'
 paths:
-  /visits/{unlocode}/{imonumber}/{crn}:
+  /visits/{shipReportingSystemEntryPortCode}/{shipImoNumber}/{shipStayReferenceNumber}:
     get:
       tags:
         - Operational Data API
       summary: Request Operational Data
-      description: This endpoint can be used to request operational data from a vessel's visit
+      description: >-
+        This endpoint can be used to request operational data from a ships visit
       operationId: submit
       parameters:
-        - name: unlocode
+        - name: shipReportingSystemEntryPortCode
           in: path
           required: true
           schema:
             type: string
-        - name: imonumber
+        - name: shipImoNumber
           in: path
           required: true
           schema:
             type: string
-        - name: crn
+        - name: shipStayReferenceNumber
           in: path
           required: true
           schema:
@@ -42,16 +43,16 @@ paths:
 components:
   schemas:
     OperationalData:
-      title: PortCallOptimizationVisit
+      title: OperationalData
       type: object
       properties:
-        shipStayReferenceNumber:
+        shipReportingSystemEntryPortCode:
           type: string
           nullable: true
         shipImoNumber:
           type: string
           nullable: true
-        shipReportingSystemEntryPortCode:
+        shipStayReferenceNumber:
           type: string
           nullable: true
         portArrival:
