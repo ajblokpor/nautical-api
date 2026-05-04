@@ -13,6 +13,7 @@ paths:
       operationId: submit
       parameters:
         - name: shipReportingSystemEntryPortCode
+          description: a code representing the point where the ship enters the system; this must follow the UN/LOCODE, which is a pre-defined enumerated list of 5 character long strings. 
           in: path
           required: true
           schema:
