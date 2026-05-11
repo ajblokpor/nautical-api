@@ -1,19 +1,16 @@
 openapi: 3.0.1
 info:
   title: Operational Data API
-  version: '0.1'
+  version: '1.0'
 paths:
-  /visits/{shipReportingSystemEntryPortCode}/{shipImoNumber}/{shipStayReferenceNumber}:
+  /port-arrival/{shipReportingSystemEntryPortCode}/{shipImoNumber}/{shipStayReferenceNumber}:
     get:
       tags:
         - Operational Data API
-      summary: Request Operational Data
-      description: >-
-        This endpoint can be used to request operational data from a ships visit
-      operationId: submit
+      summary: Request Operational Data for Port Arrival
+      operationId: port-arrival
       parameters:
         - name: shipReportingSystemEntryPortCode
-          description: a code representing the point where the ship enters the system; this must follow the UN/LOCODE, which is a pre-defined enumerated list of 5 character long strings. 
           in: path
           required: true
           schema:
@@ -34,16 +31,47 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OperationalData'
+                $ref: '#/components/schemas/PortArrival'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+  /port-departure/{shipReportingSystemEntryPortCode}/{shipImoNumber}/{shipStayReferenceNumber}:
+    get:
+      tags:
+        - Operational Data API
+      summary: Request Operational Data voor Port Departure
+      operationId: port-departure
+      parameters:
+        - name: shipReportingSystemEntryPortCode
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: shipImoNumber
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: shipStayReferenceNumber
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PortDeparture'
         '400':
           description: Bad request
         '401':
           description: Unauthorized
 components:
   schemas:
-    OperationalData:
+    PortArrivalDeparture:
       title: OperationalData
       type: object
       properties:
@@ -56,69 +84,32 @@ components:
         shipStayReferenceNumber:
           type: string
           nullable: true
-        portArrival:
-          $ref: '#/components/schemas/PortArrival'
-        berthVisits:
-          type: array
-          items:
-            $ref: '#/components/schemas/BerthVisit'
-        portDeparture:
-          $ref: '#/components/schemas/PortDeparture'
     PortArrival:
       title: PortArrival
       allOf: 
-        - $ref: '#/components/schemas/ArrivalTimestamps'
+        - $ref: '#/components/schemas/PortArrivalDeparture'
         - type: object
           properties:
             pilotBoardingPlaceName:
               type: string
               nullable: true
-    BerthVisit:
-      title: BerthVisit
-      allOf: 
-        - $ref: '#/components/schemas/ArrivalTimestamps'
-        - $ref: '#/components/schemas/DepartureTimestamps'
-        - type: object
-          properties:
-            berthName:
+            plannedTimeOfArrival:
               type: string
-              nullable: true
-            gln:
-              type: string
+              format: date-time
               nullable: true
     PortDeparture:
       title: PortDeparture
       allOf: 
-        - $ref: '#/components/schemas/DepartureTimestamps'
+        - $ref: '#/components/schemas/PortArrivalDeparture'
         - type: object
           properties:
             berthName:
               type: string
               nullable: true
-            gln:
+            berthGln:
               type: string
               nullable: true
-    ArrivalTimestamps:
-      title: ArrivalTimestamps
-      type: object
-      properties:
-        plannedTimeOfArrival:
-          type: string
-          format: date-time
-          nullable: true
-        actualTimeOfArrival:
-          type: string
-          format: date-time
-          nullable: true
-    DepartureTimestamps:
-      title: DepartureTimestamps
-      type: object
-      properties:
-        plannedTimeOfDeparture:
-          type: string
-          format: date-time
-          nullable: true
-        actualTimeOfDeparture:
-          type: string
-          format: date-time
-          nullable: true
+            plannedTimeOfDeparture:
+              type: string
+              format: date-time
+              nullable: true
