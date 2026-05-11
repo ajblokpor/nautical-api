@@ -32,6 +32,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PortArrival'
+              example:
+                shipReportingSystemEntryPortCode: 'NLRTM'
+                shipImoNumber: '9239551'
+                shipStayReferenceNumber: 'NLRTM26000001'
+                pilotBoardingPlaceName: 'Maas Center'
+                plannedTimeOfArrival: '2026-05-11T12:30'
         '400':
           description: Bad request
         '401':
@@ -65,6 +71,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PortDeparture'
+              example:
+                shipReportingSystemEntryPortCode: 'NLRTM'
+                shipImoNumber: '9239551'
+                shipStayReferenceNumber: 'NLRTM26000001'
+                berthName: 'HOLLAND AMERIKAKADE'
+                berthGln: '8719331013864'
+                plannedTimeOfDeparture: '2026-05-12T08:30'
         '400':
           description: Bad request
         '401':
