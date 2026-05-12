@@ -1,0 +1,34 @@
+{
+    "arrivals": [
+        {
+            "shipReportingSystemEntryPortCode": "NLRTM",
+            "shipImoNumber": "9239551",
+            "shipStayReferenceNumber": "NLRTM26000001",
+            "plannedTimeOfArrival": "2024-07-01T12:00:00Z",
+            "pilotBoardingPlaceName": "Maas Center"
+        },
+        {
+            "shipReportingSystemEntryPortCode": "NLRTM",
+            "shipImoNumber": "2345678",
+            "shipStayReferenceNumber": "NLRTM26000002",
+            "plannedTimeOfArrival": "2024-07-02T15:30:00Z",
+            "pilotBoardingPlaceName": "Maas Center"
+        }
+    ],
+    "departures": [
+        {
+            "shipReportingSystemEntryPortCode": "NLRTM",
+            "shipImoNumber": "9239551",
+            "shipStayReferenceNumber": "NLRTM26000001",
+            "berthName": "Parkkade",
+            "plannedTimeOfDeparture": "2024-07-05T18:00:00Z"
+        },
+        {
+            "shipReportingSystemEntryPortCode": "NLRTM",
+            "shipImoNumber": "2345678",
+            "shipStayReferenceNumber": "NLRTM26000002",
+            "berthName": "Parkkade",
+            "plannedTimeOfDeparture": "2024-07-06T20:30:00Z"
+        }
+    ]
+}
