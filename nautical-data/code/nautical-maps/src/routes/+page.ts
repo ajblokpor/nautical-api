@@ -54,7 +54,7 @@ export const load: PageLoad = (async ({ fetch }) => {
 			return a.concat(b);
 		})
 		.map((berth) => {
-			if(berth.coordinates.length !== 2) {
+			if (berth.coordinates.length !== 2) {
 				console.warn(`Berth ${berth.name} has ${berth.coordinates.length} coordinates, expected 2. Skipping.`);
 				return null;
 			}
@@ -78,7 +78,7 @@ export const load: PageLoad = (async ({ fetch }) => {
 	const berthPos = result
 		.map((t) =>
 			t.berths.map((b) => {
-				if(!b.positions) return [];
+				if (!b.positions) return [];
 				return b.positions.map((bp) => {
 					return {
 						lng: bp.geoCoordinate?.longitude,
@@ -98,19 +98,24 @@ export const load: PageLoad = (async ({ fetch }) => {
 		.filter(g => g.lng);
 
 	// determine map bounds
-	const lats = berthPos.map((g) => g.lat);
-	const lons = berthPos.map((g) => g.lng);
+	let lats: number[] = [];
+	let lons: number[] = [];
+	if (berthPos.length > 0) {
+		lats = berthPos.map((g) => g.lat);
+		lons = berthPos.map((g) => g.lng);
+	} else {
+		lats = berths.map((g) => g.latA).concat(berths.map((g) => g.latB));
+		lons = berths.map((g) => g.lngA).concat(berths.map((g) => g.lngB));
+	}
 	const minLat = Math.min(...lats);
 	const maxLat = Math.max(...lats);
 	const minLong = Math.min(...lons);
 	const maxLong = Math.max(...lons);
 
-	const bounds: LngLatBoundsLike = [
+	let bounds = [
 		[minLong - 0.05, minLat - 0.05],
 		[maxLong + 0.05, maxLat + 0.05]
 	];
-
-	console.log('Bounds:', bounds);
 
 	return {
 		terminals: terminals,
