@@ -758,7 +758,7 @@
         {
             "gln": "8714231751182",
             "name": "B-P 23",
-            "berthType": "Buoy",
+            "berthType": "MultiBuoyMooringBerth",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -785,7 +785,7 @@
         {
             "gln": "8714231755036",
             "name": "B-P 25",
-            "berthType": "Buoy",
+            "berthType": "MultiBuoyMooringBerth",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
