@@ -81,7 +81,7 @@
 </script>
 
 <select bind:value={selectedTerminal} onchange={onChangeSelectTerminal}>
-	<option value={null}> ALLE </option>
+	<option value={null}> All Terminals </option>
 	{#each terminals as terminal}
 		<option value={terminal}>
 			{terminal.name}-{terminal.gln}
@@ -90,7 +90,7 @@
 </select>
 
 <select bind:value={selectedBerth} onchange={onChangeSelectBerth}>
-	<option value={null}> ALLE </option>
+	<option value={null}> All Berths </option>
 	{#each berthsForSelectedTerminal as berth}
 		<option value={berth}>
 			{berth.name}-{berth.gln}
