@@ -200,7 +200,7 @@
         {
             "gln": "8719331166195",
             "name": "PARKKADE STEIGER 2",
-            "berthType": "Jetty",
+            "berthType": "PierOrJetty",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -227,7 +227,7 @@
         {
             "gln": "8719331166188",
             "name": "PARKKADE STEIGER 3",
-            "berthType": "Jetty",
+            "berthType": "PierOrJetty",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -704,7 +704,7 @@
         {
             "gln": "8714231752639",
             "name": "Palen 20",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -720,7 +720,7 @@
                 {
                     "glnWithExt": "8714231752639-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.894789,
                         "longitude": 4.44407
@@ -731,7 +731,7 @@
         {
             "gln": "8714231751434",
             "name": "PALEN 21",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -747,7 +747,7 @@
                 {
                     "glnWithExt": "8714231751434-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.894391,
                         "longitude": 4.446416
@@ -774,7 +774,7 @@
                 {
                     "glnWithExt": "8714231751182-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.893853,
                         "longitude": 4.444497
@@ -801,7 +801,7 @@
                 {
                     "glnWithExt": "8714231755036-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.892839,
                         "longitude": 4.445334
@@ -812,7 +812,7 @@
         {
             "gln": "8719331014175",
             "name": "FWP 3",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -828,7 +828,7 @@
                 {
                     "glnWithExt": "8719331014175-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.962475,
                         "longitude": 4.055751
@@ -839,7 +839,7 @@
         {
             "gln": "8719331014069",
             "name": "FWP A",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -855,7 +855,7 @@
                 {
                     "glnWithExt": "8719331014069-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.963725,
                         "longitude": 4.055499
@@ -866,7 +866,7 @@
         {
             "gln": "8719331014168",
             "name": "FWP 2",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -882,7 +882,7 @@
                 {
                     "glnWithExt": "8719331014168-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.962654,
                         "longitude": 4.055712
@@ -893,7 +893,7 @@
         {
             "gln": "8714231759928",
             "name": "PALEN 79",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -909,7 +909,7 @@
                 {
                     "glnWithExt": "8714231759928-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.941369,
                         "longitude": 4.179649
@@ -920,7 +920,7 @@
         {
             "gln": "8714231759362",
             "name": "PALEN 80",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -936,7 +936,7 @@
                 {
                     "glnWithExt": "8714231759362-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.937715,
                         "longitude": 4.186664
@@ -947,7 +947,7 @@
         {
             "gln": "8719331164184",
             "name": "PALEN 81",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -963,7 +963,7 @@
                 {
                     "glnWithExt": "8719331164184-East-West",
                     "name": "East-West",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.935338,
                         "longitude": 4.19135
@@ -972,7 +972,7 @@
                 {
                     "glnWithExt": "8719331164184-West",
                     "name": "West",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.935936,
                         "longitude": 4.190161
@@ -981,7 +981,7 @@
                 {
                     "glnWithExt": "8719331164184-East",
                     "name": "East",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.93474,
                         "longitude": 4.192541
@@ -992,7 +992,7 @@
         {
             "gln": "8719331012447",
             "name": "PALEN 82",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -1008,7 +1008,7 @@
                 {
                     "glnWithExt": "8719331012447-East",
                     "name": "East",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.932219,
                         "longitude": 4.197531
@@ -1017,7 +1017,7 @@
                 {
                     "glnWithExt": "8719331012447-East-West",
                     "name": "East-West",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.932859,
                         "longitude": 4.196265
@@ -1026,7 +1026,7 @@
                 {
                     "glnWithExt": "8719331012447-West",
                     "name": "West",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.9335,
                         "longitude": 4.194998
@@ -1037,7 +1037,7 @@
         {
             "gln": "8714231759492",
             "name": "PALEN 90",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -1053,7 +1053,7 @@
                 {
                     "glnWithExt": "8714231759492-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.975273,
                         "longitude": 3.992063
@@ -1064,7 +1064,7 @@
         {
             "gln": "8714231757764",
             "name": "PALEN 91",
-            "berthType": "Dolphin",
+            "berthType": "FenderOrBreastingDolphin",
             "unloCode": "NLRTM",
             "geoCoordinates": [
                 {
@@ -1080,7 +1080,7 @@
                 {
                     "glnWithExt": "8714231757764-Center position",
                     "name": "Center position",
-                    "type": "Dolphin",
+                    "type": "FenderOrBreastingDolphin",
                     "geoCoordinate": {
                         "latitude": 51.972589,
                         "longitude": 3.990742
