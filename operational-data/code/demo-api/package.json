@@ -1,7 +1,11 @@
 {
   "name": "operational-data-demo-api",
   "version": "1.0.0",
-  "private": true,
+  "description": "A simple API for demonstration purposes of the Operational Data.",
+  "author": {
+    "name": "Arjen de Blok",
+    "email": "arjen.de.blok@ict.nl"
+  },
   "scripts": {
     "start": "node server.js"
   },

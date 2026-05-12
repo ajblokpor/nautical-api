@@ -1,4 +1,11 @@
 {
+  "name": "demo-api",
+  "version": "1.0.0",
+  "description": "A simple API for demonstration purposes of the Nautical Data.",
+  "author": {
+    "name": "Arjen de Blok",
+    "email": "arjen.de.blok@ict.nl"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1"
