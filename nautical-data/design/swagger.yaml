@@ -60,7 +60,7 @@ paths:
     get:
       operationId: berth
       summary: Berth details with berth positions (optional)
-      description: Returns detailed berth information with berth positions
+      description: Returns detailed berth information with or without berth positions
       parameters:
         - name: gln
           in: path
@@ -74,7 +74,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BerthWithPositions'
+                $ref: '#/components/schemas/BerthWithOptionalPositions'
               examples:
                 example1:
                   summary: Berth without positions
@@ -126,7 +126,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfTerminalWithBerthsAndPositions'
+                $ref: '#/components/schemas/ArrayOfTerminalWithBerthsAndOptionalPositions'
         '404':
           description: No terminals and berths found
 components:
@@ -268,19 +268,19 @@ components:
           additionalProperties: false
           required:
             - berths
-    TerminalWithBerthsAndPositions:
-      description: A terminal with berth and berth positions
+    TerminalWithBerthsAndOptionalPositions:
+      description: A terminal with berth and optional berth positions
       allOf:
         - $ref: '#/components/schemas/Terminal'
         - type: object
           properties:
             berths:
-              $ref: '#/components/schemas/ArrayOfBerthWithPositions'
+              $ref: '#/components/schemas/ArrayOfBerthWithOptionalPositions'
           additionalProperties: false
           required:
             - berths
-    BerthWithPositions:
-      description: A berth with berth positions
+    BerthWithOptionalPositions:
+      description: A berth with or without berth positions
       allOf:
         - $ref: '#/components/schemas/Berth'
         - type: object
@@ -296,15 +296,15 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/Location'
-    ArrayOfBerthWithPositions:
+    ArrayOfBerthWithOptionalPositions:
       type: array
       items:
-        $ref: '#/components/schemas/BerthWithPositions'
+        $ref: '#/components/schemas/BerthWithOptionalPositions'
     ArrayOfBerthPosition:
       type: array
       items:
         $ref: '#/components/schemas/BerthPosition'
-    ArrayOfTerminalWithBerthsAndPositions:
+    ArrayOfTerminalWithBerthsAndOptionalPositions:
       type: array
       items:
-        $ref: '#/components/schemas/TerminalWithBerthsAndPositions'
+        $ref: '#/components/schemas/TerminalWithBerthsAndOptionalPositions'
