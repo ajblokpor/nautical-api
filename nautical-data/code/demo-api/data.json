@@ -270,7 +270,7 @@
                 {
                     "glnWithExt": "8719331166256-6",
                     "name": "6",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902616,
                         "longitude": 4.469614
@@ -279,7 +279,7 @@
                 {
                     "glnWithExt": "8719331166256-5",
                     "name": "5",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902539,
                         "longitude": 4.469344
@@ -288,7 +288,7 @@
                 {
                     "glnWithExt": "8719331166256-7",
                     "name": "7",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902693,
                         "longitude": 4.469884
@@ -297,7 +297,7 @@
                 {
                     "glnWithExt": "8719331166256-4",
                     "name": "4",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902457,
                         "longitude": 4.469051
@@ -306,7 +306,7 @@
                 {
                     "glnWithExt": "8719331166256-8",
                     "name": "8",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902768,
                         "longitude": 4.470156
@@ -315,7 +315,7 @@
                 {
                     "glnWithExt": "8719331166256-9",
                     "name": "9",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.902845,
                         "longitude": 4.470426
@@ -342,7 +342,7 @@
                 {
                     "glnWithExt": "8719331013864-37",
                     "name": "37",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904291,
                         "longitude": 4.482683
@@ -351,7 +351,7 @@
                 {
                     "glnWithExt": "8719331013864-10",
                     "name": "10",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906666,
                         "longitude": 4.487238
@@ -360,7 +360,7 @@
                 {
                     "glnWithExt": "8719331013864-9",
                     "name": "9",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906762,
                         "longitude": 4.487423
@@ -369,7 +369,7 @@
                 {
                     "glnWithExt": "8719331013864-8",
                     "name": "8",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906842,
                         "longitude": 4.487579
@@ -378,7 +378,7 @@
                 {
                     "glnWithExt": "8719331013864-7",
                     "name": "7",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906938,
                         "longitude": 4.487764
@@ -387,7 +387,7 @@
                 {
                     "glnWithExt": "8719331013864-6",
                     "name": "6",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.907018,
                         "longitude": 4.48792
@@ -396,7 +396,7 @@
                 {
                     "glnWithExt": "8719331013864-5",
                     "name": "5",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.90716,
                         "longitude": 4.488197
@@ -405,7 +405,7 @@
                 {
                     "glnWithExt": "8719331013864-36",
                     "name": "36",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904388,
                         "longitude": 4.482829
@@ -414,7 +414,7 @@
                 {
                     "glnWithExt": "8719331013864-35",
                     "name": "35",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904471,
                         "longitude": 4.482991
@@ -423,7 +423,7 @@
                 {
                     "glnWithExt": "8719331013864-34",
                     "name": "34",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904551,
                         "longitude": 4.483146
@@ -432,7 +432,7 @@
                 {
                     "glnWithExt": "8719331013864-33",
                     "name": "33",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904647,
                         "longitude": 4.483331
@@ -441,7 +441,7 @@
                 {
                     "glnWithExt": "8719331013864-29",
                     "name": "29",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905,
                         "longitude": 4.484013
@@ -450,7 +450,7 @@
                 {
                     "glnWithExt": "8719331013864-32",
                     "name": "32",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904727,
                         "longitude": 4.483487
@@ -459,7 +459,7 @@
                 {
                     "glnWithExt": "8719331013864-31",
                     "name": "31",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904824,
                         "longitude": 4.483672
@@ -468,7 +468,7 @@
                 {
                     "glnWithExt": "8719331013864-30",
                     "name": "30",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904903,
                         "longitude": 4.483828
@@ -477,7 +477,7 @@
                 {
                     "glnWithExt": "8719331013864-24",
                     "name": "24",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905432,
                         "longitude": 4.48485
@@ -486,7 +486,7 @@
                 {
                     "glnWithExt": "8719331013864-23",
                     "name": "23",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905528,
                         "longitude": 4.485037
@@ -495,7 +495,7 @@
                 {
                     "glnWithExt": "8719331013864-22",
                     "name": "22",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905608,
                         "longitude": 4.485191
@@ -504,7 +504,7 @@
                 {
                     "glnWithExt": "8719331013864-21",
                     "name": "21",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905704,
                         "longitude": 4.485378
@@ -513,7 +513,7 @@
                 {
                     "glnWithExt": "8719331013864-20",
                     "name": "20",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905784,
                         "longitude": 4.485532
@@ -522,7 +522,7 @@
                 {
                     "glnWithExt": "8719331013864-19",
                     "name": "19",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.90588,
                         "longitude": 4.485719
@@ -531,7 +531,7 @@
                 {
                     "glnWithExt": "8719331013864-18",
                     "name": "18",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905961,
                         "longitude": 4.485874
@@ -540,7 +540,7 @@
                 {
                     "glnWithExt": "8719331013864-17",
                     "name": "17",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906056,
                         "longitude": 4.48606
@@ -549,7 +549,7 @@
                 {
                     "glnWithExt": "8719331013864-16",
                     "name": "16",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906137,
                         "longitude": 4.486215
@@ -558,7 +558,7 @@
                 {
                     "glnWithExt": "8719331013864-25",
                     "name": "25",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905352,
                         "longitude": 4.484695
@@ -567,7 +567,7 @@
                 {
                     "glnWithExt": "8719331013864-26",
                     "name": "26",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905256,
                         "longitude": 4.484509
@@ -576,7 +576,7 @@
                 {
                     "glnWithExt": "8719331013864-15",
                     "name": "15",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906233,
                         "longitude": 4.486401
@@ -585,7 +585,7 @@
                 {
                     "glnWithExt": "8719331013864-27",
                     "name": "27",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905176,
                         "longitude": 4.484354
@@ -594,7 +594,7 @@
                 {
                     "glnWithExt": "8719331013864-14",
                     "name": "14",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906313,
                         "longitude": 4.486556
@@ -603,7 +603,7 @@
                 {
                     "glnWithExt": "8719331013864-13",
                     "name": "13",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906409,
                         "longitude": 4.486742
@@ -612,7 +612,7 @@
                 {
                     "glnWithExt": "8719331013864-12",
                     "name": "12",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.90649,
                         "longitude": 4.486897
@@ -621,7 +621,7 @@
                 {
                     "glnWithExt": "8719331013864-11",
                     "name": "11",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.906586,
                         "longitude": 4.487084
@@ -630,7 +630,7 @@
                 {
                     "glnWithExt": "8719331013864-28",
                     "name": "28",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.905079,
                         "longitude": 4.484168
@@ -657,7 +657,7 @@
                 {
                     "glnWithExt": "8719331010467-41",
                     "name": "41",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.903769,
                         "longitude": 4.483388
@@ -666,7 +666,7 @@
                 {
                     "glnWithExt": "8719331010467-40",
                     "name": "40",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.903906,
                         "longitude": 4.483204
@@ -675,7 +675,7 @@
                 {
                     "glnWithExt": "8719331010467-39",
                     "name": "39",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.90404,
                         "longitude": 4.483022
@@ -684,7 +684,7 @@
                 {
                     "glnWithExt": "8719331010467-38",
                     "name": "38",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904178,
                         "longitude": 4.482837
@@ -693,7 +693,7 @@
                 {
                     "glnWithExt": "8719331010467-37",
                     "name": "37",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.904291,
                         "longitude": 4.482683
@@ -1134,7 +1134,7 @@
                 {
                     "glnWithExt": "8719331165426-Center position",
                     "name": "Center position",
-                    "type": "Bollard",
+                    "type": "BollardNumber",
                     "geoCoordinate": {
                         "latitude": 51.968344,
                         "longitude": 3.992777
