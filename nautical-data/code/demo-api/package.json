@@ -6,6 +6,11 @@
     "name": "Arjen de Blok",
     "email": "arjen.de.blok@ict.nl"
   },
+  "scripts": {
+    "start": "node server.js",
+    "startWithPositions": "node server.js --with-positions",
+    "help": "node server.js --help"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1"

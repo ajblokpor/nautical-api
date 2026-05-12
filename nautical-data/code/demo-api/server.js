@@ -5,6 +5,18 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const args = process.argv.slice(2);
+const includePositions = args.includes('--with-positions');
+const showHelp = args.includes('--help') || args.includes('-h');
+
+if(showHelp) {
+  console.log('Usage: node server.js [--with-positions]');
+  console.log('');
+  console.log('Options:');
+  console.log('  --with-positions  Include berth positions in berth and fetchAll responses');
+  console.log('  -h, --help        Show this help message');
+  process.exit(0);
+}
 
 app.use(cors());
 app.use(express.json());
@@ -27,6 +39,12 @@ if(terminals.length === 0 || berths.length === 0) {
 // Validate GLN pattern
 function isValidGln(gln) {
   return /^[1-9][0-9]{12,}$/.test(gln);
+}
+
+function getPositionsPayload(berth) {
+  return includePositions && berth.positions && berth.positions.length > 0
+    ? { positions: berth.positions }
+    : {};
 }
 
 let errorInData = false;
@@ -173,7 +191,7 @@ app.get('/berths/:gln', (req, res) => {
     berthType: berth.berthType,
     unloCode: berth.unloCode,
     geoCoordinates: berth.geoCoordinates,
-    ...(berth.positions && berth.positions.length > 0 && { positions: berth.positions })
+    ...getPositionsPayload(berth)
   };
 
   res.json(result);
@@ -193,7 +211,7 @@ app.get('/fetchAll', (req, res) => {
           berthType: fullBerth.berthType,
           unloCode: fullBerth.unloCode,
           geoCoordinates: fullBerth.geoCoordinates,
-          ...(fullBerth.positions && fullBerth.positions.length > 0 && { positions: fullBerth.positions })
+          ...getPositionsPayload(fullBerth)
         };
       }
       // Fallback if berth details not found
@@ -243,11 +261,12 @@ app.use((req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Nautical API server running on port ${PORT}`);
+  console.log(`Berth positions are ${includePositions ? 'enabled' : 'disabled'}${includePositions ? '' : ' (use --with-positions to include them)'}`);
   console.log(`Available endpoints:`);
   console.log(`  GET /terminals          - List all terminals`);
   console.log(`  GET /terminals/:gln     - Get terminal details with berths`);
-  console.log(`  GET /berths/:gln        - Get berth details with positions`);
-  console.log(`  GET /fetchAll           - Get all data`);
+  console.log(`  GET /berths/:gln        - Get berth details${includePositions ? ' with positions' : ''}`);
+  console.log(`  GET /fetchAll           - Get all data${includePositions ? ' with berth positions' : ''}`);
   console.log(`  GET /health             - Health check`);
 });
 
